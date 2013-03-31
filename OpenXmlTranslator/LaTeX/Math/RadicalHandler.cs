@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Math;
@@ -39,7 +40,14 @@ namespace OpenXmlTranslate.LaTeX
 
         private static bool HasExplicitDegree(this Radical rad)
         {
-            return rad.Degree != null;
+            if (rad.Degree != null && rad.Degree.HasExplicitDegree())
+                return true;
+            return false;
+        }
+
+        private static bool HasExplicitDegree(this Degree deg)
+        {
+            return deg.Descendants<Text>().Count() != 0;
         }
     }
 }
