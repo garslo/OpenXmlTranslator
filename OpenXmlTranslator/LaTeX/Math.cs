@@ -11,38 +11,6 @@ namespace OpenXmlTranslate.LaTeX
 {
     static public class Math
     {
-<<<<<<< HEAD
-=======
-        static private DictT unicodeMap;
-
-        static private List<string> standardFunctions = new List<string>
-        {
-            "sin",
-            "cos",
-            "tan",
-            "csc",
-            "sec",
-            "cot",
-            "log",
-            "ln",
-            "lim",
-            "max",
-            "min",
-            "exp",
-        };
-
-        private static string EquationRowSeparator
-        {
-            get { return String.Format(@" \\{0}    ", Environment.NewLine); }
-        }
-
-        private static string EquationArrayTemplate =
-@"\begin{{align*}}
-    {0}
-\end{{align*}}";
-
-
->>>>>>> parent of 28c0bbc... Fixed line ending bug
         public static string Translate(IEnumerable<OpenXmlElement> oMaths)
         {
             return String.Join("", oMaths.Select(Translate));
