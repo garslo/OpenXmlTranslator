@@ -78,6 +78,8 @@ namespace OpenXmlTranslate.LaTeX
                 {'\u03C7', @"\chi"},
                 {'\u03C8', @"\psi"},
                 {'\u03C9', @"\omega"},
+                {'\u00B0', @"{}^{\circ}"}, // degree sign
+                {'\u2248', @"\approx"},
             };
         }
 
