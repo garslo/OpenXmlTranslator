@@ -1,0 +1,6 @@
+*.dll
+*.suo
+*/bin/*
+*/obj/*
+*.pdf
+scratch/
