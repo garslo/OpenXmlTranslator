@@ -14,18 +14,7 @@ namespace OpenXmlTranslate.LaTeX
     using DictT = Dictionary<char, string>;
     static partial class OpenXmlHandlers
     {
-        static private DictT unicodeMap;
-
-        public static string AsLaTeX(Run run)
-        {
-            if (unicodeMap == null)
-                PopulateUnicodeMap();
-            return run.InnerText.ReplaceUnicode().EliminateExtraSpaces();
-        }
-
-        private static void PopulateUnicodeMap()
-        {
-            unicodeMap = new DictT
+        static private DictT unicodeMap = new DictT
             {
                 // Uppercase
                 {'\u0391', @"\Alpha"},
@@ -81,6 +70,10 @@ namespace OpenXmlTranslate.LaTeX
                 {'\u00B0', @"{}^{\circ}"}, // degree sign
                 {'\u2248', @"\approx"},
             };
+
+        public static string AsLaTeX(Run run)
+        {
+            return run.InnerText.ReplaceUnicode().EliminateExtraSpaces();
         }
 
         private static string ReplaceUnicode(this string text)
