@@ -8,9 +8,10 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OpenXmlTranslate</RootNamespace>
-    <AssemblyName>OpenXmlTranslator</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AssemblyName>OpenXmlTranslate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,26 +45,31 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LaTeX\Math.cs" />
-    <Compile Include="LaTeX\Math\BarHandler.cs" />
-    <Compile Include="LaTeX\Math\BaseHandler.cs" />
-    <Compile Include="LaTeX\Math\BorderBoxHandler.cs" />
-    <Compile Include="LaTeX\Math\BoxHandler.cs" />
-    <Compile Include="LaTeX\Math\DelimiterHandler.cs" />
-    <Compile Include="LaTeX\Math\EquationArrayHandler.cs" />
-    <Compile Include="LaTeX\Math\FractionHandler.cs" />
-    <Compile Include="LaTeX\Math\FunctionHandler.cs" />
-    <Compile Include="LaTeX\Math\LimitLowerHandler.cs" />
-    <Compile Include="LaTeX\Math\LimitUpperHandler.cs" />
-    <Compile Include="LaTeX\Math\NaryHandler.cs" />
-    <Compile Include="LaTeX\Math\PreSubSuperHandler.cs" />
-    <Compile Include="LaTeX\Math\RadicalHandler.cs" />
-    <Compile Include="LaTeX\Math\RunHandler.cs" />
-    <Compile Include="LaTeX\Math\SubscriptHandler.cs" />
-    <Compile Include="LaTeX\Math\SubSuperscriptHandler.cs" />
-    <Compile Include="LaTeX\Math\SuperscriptHandler.cs" />
+    <Compile Include="ElementConverter.cs" />
+    <Compile Include="GenericFactory.cs" />
+    <Compile Include="LaTeX\LaTeXFactory.cs" />
+    <Compile Include="LaTeX\LaTeXElement.cs" />
+    <Compile Include="LaTeX\Math\Bar.cs" />
+    <Compile Include="LaTeX\Math\Base.cs" />
+    <Compile Include="LaTeX\Math\Box.cs" />
+    <Compile Include="LaTeX\Math\Delimiter.cs" />
+    <Compile Include="LaTeX\Math\EquationArray.cs" />
+    <Compile Include="LaTeX\Math\Fraction.cs" />
+    <Compile Include="LaTeX\Math\MathFunction.cs" />
+    <Compile Include="LaTeX\Math\PreSubSuper.cs" />
+    <Compile Include="LaTeX\Math\Radical.cs" />
+    <Compile Include="LaTeX\Math\Run.cs" />
+    <Compile Include="LaTeX\Math\Subscript.cs" />
+    <Compile Include="LaTeX\Math\SubSuperscript.cs" />
+    <Compile Include="LaTeX\Math\Superscript.cs" />
+    <Compile Include="LaTeX\OpenXmlToLaTeXElementConverter.cs" />
+    <Compile Include="LaTeX\OpenXmlToLaTeXTranslator.cs" />
+    <Compile Include="OpenXmlExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\LaTeXMathTest.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Tests\LaTeX_Math__Tests.cs" />
+    <Compile Include="Tests\LaTeX_OxmlToLaTexElementConverter__Tests.cs" />
+    <Compile Include="Translator.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
