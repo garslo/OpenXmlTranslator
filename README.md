@@ -5,22 +5,23 @@ OpenXmlTranslator is a library that aims to convert
 formats. So far there is partial conversion of the mathematics subset
 of OpenXML to [LaTeX][LaTeX].
 
-# Docs & Explanations
 
-Check the [wiki!][wiki]
+## Docs & Explanations
 
-# Requirements
+I've only *just* started this project so the documentation
+non-existent. I plan to add some shortly. Any documentation will
+be on the [wiki][wiki] when complete.
+
+## Requirements
 
 OpenXmlTranslator requires the [Open XML SDK][OpenXmlSdk] to be installed.
 
-# Why?
+## Why?
 
 I'm writing this for two reasons:
 
 1. To learn C# and the .NET framework a bit better
 2. To improve accessibility for mathematics in Word documents
-
-
 
 [OpenXml]: http://en.wikipedia.org/wiki/Office_Open_XML "Office Open XML"
 [LaTeX]: http://www.latex-project.org/ "LaTeX"
